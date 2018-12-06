@@ -36,5 +36,4 @@ return array(
     'Codeception\\Extension\\' => array($vendorDir . '/codeception/base/ext'),
     'Codeception\\' => array($vendorDir . '/codeception/base/src/Codeception', $vendorDir . '/codeception/stub/src'),
     'bupy7\\xml\\constructor\\'=> array($vendorDir . '/bupy7/xml/constructor/src'),
-    'bupy7\\xml\\constructor\\tests\\'=> array($vendorDir . '/bupy7/xml/constructor/tests'),
 );

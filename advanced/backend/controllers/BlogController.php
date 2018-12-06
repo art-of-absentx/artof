@@ -40,7 +40,7 @@ class BlogController extends Controller
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
         $xml = new XmlConstructor();
         $in = [
-
+            [
                 'tag' => 'root',
                 'elements' => [
                     [
@@ -64,9 +64,9 @@ class BlogController extends Controller
                         ],
                     ],
                 ],
-
+            ],
         ];
-        $xml_string = $xml->fromArray($in);
+        $xml_string = $xml->fromArray($in)->toOutput();
 
         return $this->render('index', [
             'searchModel' => $searchModel,

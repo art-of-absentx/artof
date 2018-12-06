@@ -9,6 +9,7 @@
       <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/bower-asset/punycode" />
       <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/bower-asset/typeahead.js" />
       <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/bower-asset/yii2-pjax" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/bupy7/xml" />
       <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/cebe/markdown" />
       <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/codeception/base" />
       <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/codeception/phpunit-wrapper" />

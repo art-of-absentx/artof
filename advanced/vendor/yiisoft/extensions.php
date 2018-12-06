@@ -51,10 +51,10 @@ return array (
     'bupy7/xml/constructor' =>
         array (
             'name' => 'bupy7/xml/constructor',
-            'version' => '2.0.4.0',
+            'version' => '1.3.0.0',
             'alias' =>
                 array (
-                    '@yii/bupy7/xml/constructor' => $vendorDir . '/bupy7/xml/constructor',
+                    '@bupy7/xml/constructor' => $vendorDir . '/bupy7/xml/constructor/src',
                 ),
         ),
 );
