@@ -48,4 +48,13 @@ return array (
       '@yii/faker' => $vendorDir . '/yiisoft/yii2-faker',
     ),
   ),
+    'bupy7/xml/constructor' =>
+        array (
+            'name' => 'bupy7/xml/constructor',
+            'version' => '2.0.4.0',
+            'alias' =>
+                array (
+                    '@yii/bupy7/xml/constructor' => $vendorDir . '/bupy7/xml/constructor',
+                ),
+        ),
 );
