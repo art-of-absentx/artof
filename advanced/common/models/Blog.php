@@ -32,7 +32,8 @@ class Blog extends \yii\db\ActiveRecord
         return [
             [['title', 'url'], 'required'],
             [['text'], 'string'],
-            [['status_id', 'sort'], 'integer'],
+            [['sort'], 'integer', 'max' => 99, 'min' => 1],
+            [['status_id'], 'integer', 'max' => 1, 'min' => 0],
             [['title', 'url'], 'string', 'max' => 150],
         ];
     }
@@ -44,11 +45,11 @@ class Blog extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'title' => 'Title',
-            'text' => 'Text',
+            'title' => 'Заголовок',
+            'text' => 'Текст',
             'url' => 'Url',
-            'status_id' => 'Status ID',
-            'sort' => 'Sort',
+            'status_id' => 'Статус',
+            'sort' => 'Порядок сортировки',
         ];
     }
 }
