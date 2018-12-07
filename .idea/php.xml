@@ -69,6 +69,7 @@
       <path value="$PROJECT_DIR$/advanced/vendor/bower-asset/inputmask" />
       <path value="$PROJECT_DIR$/advanced/vendor/webmozart/assert" />
       <path value="$PROJECT_DIR$/advanced/vendor/bupy7/xml" />
+      <path value="$PROJECT_DIR$/advanced/vendor/linslin/yii2-curl" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="5.4.0" />

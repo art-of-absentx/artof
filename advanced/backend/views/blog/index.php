@@ -24,7 +24,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
         <?php
         //var_dump($xml);
-        echo '<pre>',htmlspecialchars($xml),'</pre>';
+        echo '<pre>',var_dump($out),'</pre>';
+        echo '<pre>',var_dump($xml),'</pre>';
         ?>
 
     </p>

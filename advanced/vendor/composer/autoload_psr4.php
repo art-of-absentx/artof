@@ -14,6 +14,7 @@ return array(
     'yii\\bootstrap\\' => array($vendorDir . '/yiisoft/yii2-bootstrap/src'),
     'yii\\' => array($vendorDir . '/yiisoft/yii2'),
     'phpDocumentor\\Reflection\\' => array($vendorDir . '/phpdocumentor/reflection-common/src', $vendorDir . '/phpdocumentor/reflection-docblock/src', $vendorDir . '/phpdocumentor/type-resolver/src'),
+    'linslin\\yii2\\curl\\' => array($vendorDir . '/linslin/yii2-curl'),
     'cebe\\markdown\\' => array($vendorDir . '/cebe/markdown'),
     'Webmozart\\Assert\\' => array($vendorDir . '/webmozart/assert/src'),
     'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
@@ -35,5 +36,4 @@ return array(
     'Codeception\\PHPUnit\\' => array($vendorDir . '/codeception/phpunit-wrapper/src'),
     'Codeception\\Extension\\' => array($vendorDir . '/codeception/base/ext'),
     'Codeception\\' => array($vendorDir . '/codeception/base/src/Codeception', $vendorDir . '/codeception/stub/src'),
-    'bupy7\\xml\\constructor\\'=> array($vendorDir . '/bupy7/xml/constructor/src'),
 );

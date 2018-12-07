@@ -22,6 +22,7 @@
       <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/ezyang/htmlpurifier" />
       <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/fzaninotto/faker" />
       <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/guzzlehttp/psr7" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/linslin/yii2-curl" />
       <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/myclabs/deep-copy" />
       <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/phar-io/manifest" />
       <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/phar-io/version" />
