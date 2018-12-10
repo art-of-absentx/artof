@@ -57,16 +57,17 @@ class SettController extends Controller
         $distributors = $simple_xml->publicDistributors->publicDistributor;
 
         foreach ($distributors as $distr) {
-            $model = Distributors::find()->where(['code' => $distr['code']])->one();
-              if (! $model){$model = new Distributors();};
             $arr_distr = @json_decode(@json_encode($distr),1);
+            $model = Distributors::find()->where(['code' => $arr_distr['code']])->one();
 
-             // echo var_dump($model->attributes);
-              foreach($arr_distr as $key=>$value){if(is_string($value)&&array_key_exists($key,$model->attributes)) {$model->$key=$value;
-              //    echo 'key '.$key; echo 'value '.$value; echo 'm-key '.$model->$key;
-              }};
+              if (is_null($model)){$model = new Distributors();};
+              foreach($arr_distr as $key=>$value){
+                  if(is_string($value)&&array_key_exists($key,$model->attributes)) {
+                      $model->$key=$value;
+                  }
+              };
             echo $model->name."\r\n";
-              $model->save();
+            $model->save();
 
 
         }
