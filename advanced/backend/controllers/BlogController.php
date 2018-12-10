@@ -57,55 +57,25 @@ class BlogController extends Controller
           ];
         $xml_string = $xml->fromArray($in)->toOutput();
 
-        $xml_string ="<distributors><dataByDates/><publicDistributors/><sdecDistributors/><postamatDistributors/></distributors>";
+       // $xml_string ="<distributors><dataByDates/><publicDistributors/><sdecDistributors/><postamatDistributors/></distributors>";
         $url = 'http://www.100sp.ru/api/distributor';
-       // $url = 'http://admin.artof.local/blog';
         $token = "5~9kvtVFA79T56nW";
 
         $curl = new Curl();
 
         $response = $curl->setOption(CURLOPT_RETURNTRANSFER, 1)->setOption(CURLOPT_POSTFIELDS,http_build_query(array('token' => $token, 'xml' => $xml_string)))->post($url);
 
-//        $ch = curl_init();
+        $simple_xml = new \SimpleXMLElement($response);
+
 
         $bodyData = http_build_query(array('token' => $token, 'xml' => $xml_string));
-        //$bodyData = "token=".$token."&xml=". $xml_string;
-
-//        $bodyData = json_encode(array(
-//            "token"  => $token,
-//            "xml" => $xml_string
-//        ));
-
-
-//        curl_setopt($ch, CURLOPT_URL, $url);
-//        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-//        curl_setopt($ch, CURLOPT_POST, true);
-////        curl_setopt($ch, CURLOPT_SAFE_UPLOAD, false); // требуется с PHP 5.6.0
-//        curl_setopt($ch, CURLOPT_POSTFIELDS, htmlspecialchars($bodyData));
-//
-//        curl_setopt($ch, CURLOPT_HTTPHEADER, [
-//            'Content-Type: multipart/form-data; charset=utf-8'
-//         //   'Content-Length: '.strlen($bodyData)
-//        ]
-//        );
-//
-//        $data = curl_exec($ch);
-//
-//        if (curl_errno($ch)) {
-//            print "Error: " . curl_error($ch);
-//        } else {
-//            // Show me the result
-//            //var_dump($data);
-//            curl_close($ch);
-//        }
 
 
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
-            'xml' => $response,
-            'out' => $bodyData,
-
+//            'xml' => $simple_xml,
+//            'out' => $bodyData,
         ]);
     }
 

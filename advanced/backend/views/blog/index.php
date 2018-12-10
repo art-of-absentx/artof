@@ -20,15 +20,6 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Html::a('Create Blog', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
-    <p>
-
-        <?php
-        //var_dump($xml);
-        echo '<pre>',var_dump($out),'</pre>';
-        echo '<pre>',var_dump($xml),'</pre>';
-        ?>
-
-    </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
