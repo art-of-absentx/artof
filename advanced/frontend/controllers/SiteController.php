@@ -73,7 +73,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $blogs = Blog::find()->all();
+        $blogs = Blog::find()->where(['status_id'=>1])->orderBy('sort')->all();
 
         return $this->render('index',[
             'blogs'=>$blogs

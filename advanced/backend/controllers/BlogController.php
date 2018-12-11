@@ -39,43 +39,10 @@ class BlogController extends Controller
     {
         $searchModel = new BlogSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-        $xml = new XmlConstructor();
-        $in = [
-            [
-                'tag' => 'distributors',
-                'attributes' => [
-                    'xmlns:xsd' => 'http://www.w3.org/2001/XMLSchema',
-                    'xmlns:xsi'=>'http://www.w3.org/2001/XMLSchema-instance',
-
-                ],
-                'elements' => [
-                    [
-                        'tag' => 'publicDistributors',
-                    ],
-                    ],
-                ],
-          ];
-        $xml_string = $xml->fromArray($in)->toOutput();
-
-       // $xml_string ="<distributors><dataByDates/><publicDistributors/><sdecDistributors/><postamatDistributors/></distributors>";
-        $url = 'http://www.100sp.ru/api/distributor';
-        $token = "5~9kvtVFA79T56nW";
-
-        $curl = new Curl();
-
-        $response = $curl->setOption(CURLOPT_RETURNTRANSFER, 1)->setOption(CURLOPT_POSTFIELDS,http_build_query(array('token' => $token, 'xml' => $xml_string)))->post($url);
-
-        $simple_xml = new \SimpleXMLElement($response);
-
-
-        $bodyData = http_build_query(array('token' => $token, 'xml' => $xml_string));
-
 
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
-//            'xml' => $simple_xml,
-//            'out' => $bodyData,
         ]);
     }
 
