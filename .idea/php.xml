@@ -70,6 +70,12 @@
       <path value="$PROJECT_DIR$/advanced/vendor/webmozart/assert" />
       <path value="$PROJECT_DIR$/advanced/vendor/bupy7/xml" />
       <path value="$PROJECT_DIR$/advanced/vendor/linslin/yii2-curl" />
+      <path value="$PROJECT_DIR$/advanced/vendor/vova07/yii2-imperavi-widget" />
+      <path value="$PROJECT_DIR$/advanced/vendor/fortawesome/font-awesome" />
+      <path value="$PROJECT_DIR$/advanced/vendor/rmrevin/yii2-fontawesome" />
+      <path value="$PROJECT_DIR$/advanced/vendor/almasaeed2010/adminlte" />
+      <path value="$PROJECT_DIR$/advanced/vendor/cebe/yii2-gravatar" />
+      <path value="$PROJECT_DIR$/advanced/vendor/dmstr/yii2-adminlte-asset" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="5.4.0" />

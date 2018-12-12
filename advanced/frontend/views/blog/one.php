@@ -5,8 +5,8 @@
 
 use yii\helpers\Html;
 
-$this->title = 'blog';
-$this->params['breadcrumbs'][] = $this->title;
+$this->title = $blog->url;
+$this->params['breadcrumbs']['blog'] = $this->title;
 ?>
 <div class="site-index">
 
