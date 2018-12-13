@@ -47,6 +47,10 @@ class DistributorsSearch extends Distributors
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
+            'pagination' => [
+                'pageSize' => 15,
+            ],
+
         ]);
 
         $this->load($params);

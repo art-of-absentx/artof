@@ -32,11 +32,22 @@ class Blog extends \yii\db\ActiveRecord
         return [
             [['title', 'url'], 'required'],
             [['text'], 'string'],
+            [['url'], 'unique'],
             [['sort'], 'integer', 'max' => 99, 'min' => 1],
             [['status_id'], 'integer', 'max' => 1, 'min' => 0],
             [['title', 'url'], 'string', 'max' => 150],
         ];
     }
+
+    public static function getStatusList()
+    {
+        return [0=>'отключен',1=>'включен'];
+    }
+
+    public function getStatusName(){
+        return self::getStatusList()[$this->status_id];
+    }
+
 
     /**
      * {@inheritdoc}

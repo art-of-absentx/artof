@@ -29,8 +29,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'title',
             'text:ntext',
-            'url:url',
-            'status_id',
+            ['attribute'=>'url','format'=>'text'],
+            ['attribute'=>'status_id','filter'=>\common\models\Blog::getStatusList(), 'value'=>'statusName'],
             //'sort',
 
             ['class' => 'yii\grid\ActionColumn'],
