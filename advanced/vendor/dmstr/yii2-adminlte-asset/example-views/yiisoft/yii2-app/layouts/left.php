@@ -31,8 +31,9 @@
                 'options' => ['class' => 'sidebar-menu tree', 'data-widget'=> 'tree'],
                 'items' => [
                     ['label' => 'Menu Yii2', 'options' => ['class' => 'header']],
-                    ['label' => 'Блог', 'icon' => 'file-chart-pie', 'url' => ['/blog']],
-                    ['label' => 'Пункты выдачи', 'icon' => 'file-chart-pie', 'url' => ['/distributors']],
+                    ['label' => 'Блог', 'icon' => 'list', 'url' => ['/blog']],
+                    ['label' => 'Тэги', 'icon' => 'tag', 'url' => ['/tag']],
+                    ['label' => 'Пункты выдачи', 'icon' => 'bell', 'url' => ['/distributors']],
                     ['label' => 'Gii', 'icon' => 'file-code-o', 'url' => ['/gii']],
                     ['label' => 'Debug', 'icon' => 'dashboard', 'url' => ['/debug']],
                     ['label' => 'Login', 'url' => ['site/login'], 'visible' => Yii::$app->user->isGuest],

@@ -39,7 +39,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= \yii\widgets\ListView::widget([
         'dataProvider' => $dataProvider,
      //   'filterModel' => $searchModel,
-        'itemView' => 'one',
+        'itemView' => '_one',
+
     ]); ?>
 
 </div>

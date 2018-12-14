@@ -48,6 +48,11 @@ class Blog extends \yii\db\ActiveRecord
         return self::getStatusList()[$this->status_id];
     }
 
+    public function getAuthor(){
+        return $this->hasOne(User::className(),['id'=>'user_id']);
+
+    }
+
 
     /**
      * {@inheritdoc}
